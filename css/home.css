@@ -1,0 +1,25 @@
+
+.img{
+    border-radius: 5%;
+}
+.nav1{
+    background-color: #ccfff2;
+    margin-top: 0%;
+    padding-bottom: 3%;
+ 
+   
+    
+ } 
+.content{
+ display: flex;
+ justify-content: right;
+ 
+}
+.nav-item{
+  display: block;
+  margin-left: 1%;
+ margin-right: 1%;
+ text-transform: uppercase;
+ text-shadow: #ff0000;
+
+}
