@@ -1,0 +1,28 @@
+
+    .card{
+       margin: 100px; 
+     padding: 10px;
+      border: 5px solid black;
+       border-radius: 15px;
+       border-width: 5px;
+       width: 500px;
+       margin-top: 8%;
+      
+       
+     }
+    img{
+        height: 500px;
+        margin-top: 8%;
+
+    }
+    .main{
+        display: flex;
+        
+    }
+    button{
+        border-radius: 5px;
+        padding: 2%;
+        background-color: #00a9eb;
+    } 
+   
+      
