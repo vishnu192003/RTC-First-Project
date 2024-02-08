@@ -1,0 +1,120 @@
+body{
+    background-color: #1c3334;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+   
+   }
+   .main1{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+
+   }
+    .head{
+        display: flex;
+        justify-content: center;
+    }
+    .car-img{
+        width: 30%;
+        height: 400px;
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        text-align: center;
+    }
+    .car-img img{
+        width: 10%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid black;
+        transition: all ease 0.3s;
+       
+    }
+    .car-img img:hover {
+        width: 100%;
+  
+    }
+    .card{
+        width: 300px;
+        height: 450px;
+        border: solid  black 2px;
+        margin: 10px;
+        background-color: #376e6f;
+        border-radius: 2px;
+    text-align: center;
+    }
+    .card:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.2s;
+        border-radius: 15px;
+    }
+    .card img{
+   margin-top:  10px;
+        height:  200px;
+        width:  150px;
+    }
+    .name{
+        text-align: left;
+        margin-left: 50px;
+    }
+    .price{
+        font-weight: bolder;
+    }
+    button {
+        background-color: #282121;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 7px;
+        border-radius: 15px;
+    }
+    button:hover{
+        box-shadow: 0px 0px 5px 5px  rgba(183, 167, 167, 0.8);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .card-puzzle{
+        width: 200px;
+        height: 350px;
+        border: solid  rgb(0, 0, 0) 2px;
+        margin: 10px;
+        text-align: center;
+        border-radius: 2px;
+      background-color: #376e6f;
+    text-align: center;
+    }
+    .card-puzzle:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.2s;
+        border-radius: 15px;
+ 
+    }
+    .card-puzzle img{
+   margin-top:  10px;
+        height:  200px;
+        width:  150px;
+    }
+    .card-puzzle button{
+        background-color: #362b2b;
+        color: white;
+        padding: 5px 10px;
+        font-size: 12px;
+        margin-top: 7px;
+        margin-left: 7px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+    }
+    @media screen and (max-width: 768px){
+        .card{
+            width: 100%;
+            height: 100%;
+        }}
