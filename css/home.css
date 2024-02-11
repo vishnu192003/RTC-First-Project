@@ -1,25 +1,23 @@
 *{
   padding: 0;
   margin: 0;
-  font-family: 'poppins', sans-serif ;
-  box-sizing: border-box;
+  
 }
-.body{
-background-color: rgb(123, 0, 245);
-margin: 0cap;
-}
+
+
 .card-container{
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
 margin-top: 100px;  
 box-shadow: 20px 20px 60px black; 
-margin-bottom: 15rem;  
-background-color: #465767;       
+margin-bottom: 5rem;  
+background-color: #465767;  
+color: #fff;     
 }
 .card{
 width: 250px;
-background-color: black;
+background-color: #003d39;
 border-radius: 10px;
 overflow:hidden;
 box-shadow: 0px 2px 4px rgba(70, 63, 63, 0.2);   
@@ -29,32 +27,51 @@ box-shadow: 20px 20px 60px black;
 .card img{
 width: 100%;
 height: auto;
+border: 1px solid rgb(0, 0, 0);
+margin-bottom: 1rem;
 }
 .btn{
-margin-top: 10%;
-margin-bottom: 10%;
-border-radius: 15%;
-background-color: rgb(128, 128, 128);
-text-transform: 15%;
-border-radius: 1rem;
+  background: #d80000;
+  padding: 10px 50px;
+  border: none;
+  outline:none;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
 }
 .card{
 font-size: 60%;
-border: solid #59038eb9 5px;
+border: solid #000000b9 3px;
+margin-bottom: 3rem;
+margin-top: 3rem;
+
 }
 
 .nav1{
 
 background-color: #004944;
-margin-top: 5%;
+margin-top: 1%;
 padding-bottom: 5%;
 box-shadow: 10px 20px 60px #6e9ea3;      
 display: flex;
-justify-content: left;
-padding: 1rem 0 1rem 10rem;
-height: 60px;
+padding: 0.8rem 0 1rem 10rem;
+height: 30px;
+width: auto;
+justify-content: space-evenly;
  }
 
+ .nav2 {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  right: 20%;
+  
+ }
 
 .nav-item{
     margin-left: 1%;
@@ -62,7 +79,7 @@ height: 60px;
    text-transform: uppercase;
    text-decoration: none;
    color: white;
-   list-style-type: none;
+   list-style-type: none;   
   
   }
   .nav-item a {
@@ -77,99 +94,141 @@ height: 60px;
     
    }
 
-   
-
-   .logo img {
-    width: 10%;
+   .nav1 .nav-item img {
     position: relative;
-    right: 10rem;
-    bottom: 0.8rem;
-    mix-blend-mode: color-burn;
-    
-
+    left: 30rem;
    }
 
-   .logo {
-    display: flex;
-    justify-content: left;
-    margin: 0;
-    padding: 0;
-    
-   }
    .quote{
+    height: 6rem;
+    width: 60%;
+    font-size: larger;
     margin-bottom: 3rem;
+    font-family: 'Caveat', cursive;
    }
-   .footer{
-    background-color: #4e4e4e;
-    color: black;
-    height: 3rem;
-    padding-top: 1rem;
-   }
+   
   .searchbar{ 
-    top: 2rem;
-    padding-right: 35%;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
     display: flex;
-    align-items: center;
     justify-content: center;
-    } 
-  form{
-    background: #ff0000;
-    width: 600px;
+    padding: 1rem 0 0 0;
+  
+   
+    }
+
+ form button{
+  
+}
+
+ 
+.searchbar input {
+  border: 1px solid black;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+}
+
+.logo {
+  position: relative;
+  margin-left: 20rem;
+}
+.logo img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+ 
+}
+.logo a{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  
+}
+
+.name{
+  position: relative;
+  left: 15rem;
+}
+
+.copywrite{
+  display: flex;
+  background-color: #637baa;
+  height: 320px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.copywrite1{
+  width:20%;
+ margin-top: 2rem;
+  
+}
+.column{
+  margin-top: 5rem;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  
+}
+.copywrite2{
+  text-align: left;
+  font-size: 1.5rem;
+}
+p a {
+ line-height: 1rem;
+ text-decoration: none;
+ color: black;
+}
+.rtc{
+  
+  }
+ .searchname{
+    display: flex;
+    position: relative;
+    right: 7%;
+
+    width: 30%;
     height: 55px;
     display: flex;
     border: #4e4e4e;
   }
-  form input{
-    flex: 1;
-    border: 8px;
-    outline: none;
-    
+.rtc1{
+padding-top: 0.5rem;
+color: #004944;
+margin-right: 3rem;
+}
+.rtc2{
+ margin-left: 7rem;
+ 
+ 
+ }
+ .rtc3{
+ margin-bottom: 0.01rem;
+ margin-top: 0.1rem;
+ height: 3rem;
+ width: 3rem;
+ }
+ .cp-text{ 
 
-  }
- form button{
+  background-color: #000000;
+    color: rgb(255, 255, 255);
+    height: 3rem;
+    padding-top: 1rem;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+button{
   background: #d80000;
-  padding: 10px 50px;
+  padding: 10px 1rem;
   border: none;
   outline:none;
   color: #fff;
   letter-spacing: 1px;
   cursor: pointer;
+  border: 1px solid black;
 }
-form .fas fa-search{
-  
-}
- .search1{
-  font-size: 2rem;
-   position: relative;
-    top: 2rem;
-  }
-  .search2{
-    font-size: 2rem;
-    position: relative;
-    top: 2rem;
-    border-radius: 3rem;
-  }
-.search3{
-  font-size: 2rem;
-  margin-left: 1%;
-  margin-right: 1%;
-
-  
-  border: none;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  list-style-type: none;
-  text-decoration: none;
-    background-color:rgb(0, 129, 120);
-    background: linear-gradient( #004f99);
-    margin: 0px 5px;
-    padding: 5px;
-    color:rgb(0, 0, 0);
-    border-radius: 3rem;
-    position: relative;
-    top: 2rem;
-   
+a{
+  font-size:large;
 }
