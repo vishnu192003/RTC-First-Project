@@ -26,7 +26,7 @@ box-shadow: 20px 20px 60px black;
 }
 .card img{
 width: 100%;
-height: auto;
+height: 300px;
 border: 1px solid rgb(0, 0, 0);
 margin-bottom: 1rem;
 }
@@ -40,9 +40,8 @@ margin-bottom: 1rem;
   cursor: pointer;
   border: 2px solid black;
   border-radius: 3rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-
+  display: block;
+  margin: 20px auto;
 }
 .card{
 font-size: 60%;
@@ -52,52 +51,53 @@ margin-top: 3rem;
 
 }
 
-.nav1{
+.card h1{
+  text-align: center;
+}
+.card p {
+  text-align: center;
+  
+}
+.nav1 {
+  background-color: #004944;
+  margin-top: 1%;
+  padding-bottom: 5%;
+  box-shadow: 10px 2px 60px #6e9ea3;      
+  display: flex;
+  padding: 0.8rem 0 1rem; /* Removed padding on the left to avoid overlapping */
+  height: 40px;
+  width: auto; /* Allow width to adjust based on content */
+  justify-content: space-evenly;
+}
 
-background-color: #004944;
-margin-top: 1%;
-padding-bottom: 5%;
-box-shadow: 10px 20px 60px #6e9ea3;      
-display: flex;
-padding: 0.8rem 0 1rem 10rem;
-height: 30px;
-width: auto;
-justify-content: space-evenly;
- }
-
- .nav2 {
+.nav2 {
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  right: 20%;
-  
- }
+  right: 20%; /* Adjusted positioning */
+}
 
-.nav-item{
-    margin-left: 1%;
-   margin-right: 1%;
-   text-transform: uppercase;
-   text-decoration: none;
-   color: white;
-   list-style-type: none;   
-  
-  }
-  .nav-item a {
-    text-decoration: none;
-    background: linear-gradient( #004f99);
-    margin: 5px 5px;
-    padding: 5px;
-    color:white;
-    border-radius: 20%;
-    position: relative;
-    top: 0.6rem;
-    
-   }
+.nav-item {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  list-style-type: none;
+}
 
-   .nav1 .nav-item img {
-    position: relative;
-    left: 30rem;
-   }
+.nav-item a {
+  text-decoration: none;
+  background: linear-gradient(#004f99);
+  margin: 5px;
+  padding: 5px;
+  color: white;
+  border-radius: 20%;
+}
+
+.nav-item img {
+  position: relative;
+  left: 30rem; /* Adjusted positioning */
+}
+
 
    .quote{
     height: 6rem;
@@ -114,10 +114,6 @@ justify-content: space-evenly;
   
    
     }
-
- form button{
-  
-}
 
  
 .searchbar input {
