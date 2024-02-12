@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Fredoka:wght@500&family=Handlee&family=Roboto:ital@1&family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Fredoka:wght@500&family=Handlee&family=Unbounded&display=swap');
+.hf{
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 900;
+    color: #003d39;
+    font-size: 45px;
+}
+.txt{
+    padding-top: 15px;
+    color: white;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 20px;
+}
+.inbx{
+    margin-left: 40px;
+    margin-top: 60px;
+    height: 180px;
+    width: 80%;
+    padding: 30px;
+    background-color: red;
+    border-radius: 10px;
+}
+.im1{
+    height: 400px;
+    position: relative;
+    left: 1360px;
+    top: -300px;
+}
+.Free{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;  
+    box-shadow: 20px 20px 60px black; 
+    margin-bottom: 5rem;  
+    background-color: #465767;  
+    color: #fff; 
+}
+.comma{
+    position: relative;
+    top: 40px;
+    left: 10px;
+}
+.h2{
+    padding-left: 100px;
+    padding-top: 20px;
+    color: #003d39;
+    font-family: 'Comfortaa', sans-serif;
+    text-decoration: underline;
+}
+.b1{
+    width: 250px;
+background-color: #003d39;
+border-radius: 10px;
+overflow:hidden;
+box-shadow: 0px 2px 4px rgba(70, 63, 63, 0.2);   
+margin: 20px;    
+box-shadow: 20px 20px 60px black; 
+}
+.b1:hover{
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(70, 63, 63, 0.2);
+    box-shadow: 5px 5px  20px rgb(36, 36, 36);
+}
+.b1{
+    font-size: 60%;
+    border: solid #000000b9 3px;
+    margin-bottom: 3rem;
+    margin-top: 3rem; 
+    text-align: center;
+}
+.dbz{
+    width: 100%;
+    height: 300px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 1rem;
+}
+.writer{
+    color: aliceblue;
+}
+.rom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    border-radius: 10px;
+    width: 2000px;
+    display: flex;
+    background-color: #465767;
+    align-items: center;
+    margin: 30px;
+    margin-left: 200px;
+    justify-content: space-between;
+    margin: 30px;
+}
+.db{
+    margin: 30px;
+    height: 330px;
+    border-radius: 8px;
+
+}
+.romi{
+    padding: 20px;
+    color: #fff;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+
+}
+.romh{
+    padding: 0px 0px 15px 0px;
+    color: orangered;
+    font-family: 'Fredoka', sans-serif;
+}
+.box{
+    margin-top: 100px;
+    width: 1700px;
+    display: flex;
+}
+.goku{
+    position: relative;
+    left: 20px;
+    height: 600px;
+}
+.t2{
+    position: relative;
+    top: 10px;
+}
+.Free2{
+    display: flex;
+    justify-content: right;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;  
+    box-shadow: 20px 20px 60px black; 
+    margin-bottom: 5rem;  
+    background-color: #465767;  
+    color: #fff;
+}
+.nehru{
+    position: relative;
+    top: 130px;
+    mix-blend-mode: color-burn;
+    height: 400px;
+}
+.Free3{
+    display: flex;
+    justify-content: left;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;  
+    box-shadow: 20px 20px 60px black; 
+    margin-bottom: 5rem;  
+    background-color: #465767;  
+    color: #fff;
+}
+.film{
+    position: relative;
+    top: 100px;
+    mix-blend-mode: color-burn;
+    height: 500px;
+}
+.Free4{
+    display: flex;
+    justify-content: right;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;  
+    box-shadow: 20px 20px 60px black; 
+    margin-bottom: 5rem;  
+    background-color: #465767;  
+    color: #fff;
+}
+.teen{
+    position: relative;
+    top: 100px;
+    right: 00px;
+    mix-blend-mode: color-burn;
+    height:400px;
+}
+.Free5{
+    display: flex;
+    justify-content: left;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;  
+    box-shadow: 20px 20px 60px black; 
+    margin-bottom: 5rem;  
+    background-color: #465767;  
+    color: #fff;
+}
+.Free6{
+    display: flex;
+    justify-content: right;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;  
+    box-shadow: 20px 20px 60px black; 
+    margin-bottom: 5rem;  
+    background-color: #465767;  
+    color: #fff;
+}

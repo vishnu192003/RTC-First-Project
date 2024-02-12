@@ -1,0 +1,175 @@
+var SearchResultService=function() {
+SearchResultService.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+SearchResultService.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return SearchResultService._staticInstance.get_path();},
+GetSearchResultTable:function(SearchWord,SearchColoumn,ID_Search,PageNumber,PageSize,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSearchResultTable',false,{SearchWord:SearchWord,SearchColoumn:SearchColoumn,ID_Search:ID_Search,PageNumber:PageNumber,PageSize:PageSize},succeededCallback,failedCallback,userContext); },
+GetSearchResultTableSecond:function(SearchWord,SearchColoumn,ID_Search,PageNumber,PageSize,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSearchResultTableSecond',false,{SearchWord:SearchWord,SearchColoumn:SearchColoumn,ID_Search:ID_Search,PageNumber:PageNumber,PageSize:PageSize},succeededCallback,failedCallback,userContext); },
+GetSearchResultCount:function(SearchWord,SearchColoumn,ID_Search,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSearchResultCount',false,{SearchWord:SearchWord,SearchColoumn:SearchColoumn,ID_Search:ID_Search},succeededCallback,failedCallback,userContext); },
+GetSearchResultCountGoogle:function(SearchWord,SearchColoumn,ID_Search,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSearchResultCountGoogle',false,{SearchWord:SearchWord,SearchColoumn:SearchColoumn,ID_Search:ID_Search},succeededCallback,failedCallback,userContext); },
+GetSearchResultTotalCount:function(SearchWord,SearchColoumn,ID_Search,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSearchResultTotalCount',false,{SearchWord:SearchWord,SearchColoumn:SearchColoumn,ID_Search:ID_Search},succeededCallback,failedCallback,userContext); },
+GetSearchResultTotalCountGoogle:function(SearchWord,SearchColoumn,ID_Search,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSearchResultTotalCountGoogle',false,{SearchWord:SearchWord,SearchColoumn:SearchColoumn,ID_Search:ID_Search},succeededCallback,failedCallback,userContext); },
+GetSearchID:function(Price,ShippingTime,Binding,PubYear,Source,search_term,filter,IPLocation,Stock,Language,SearchType,AllowedCountry,CategoryID,Discount,PrizeId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSearchID',false,{Price:Price,ShippingTime:ShippingTime,Binding:Binding,PubYear:PubYear,Source:Source,search_term:search_term,filter:filter,IPLocation:IPLocation,Stock:Stock,Language:Language,SearchType:SearchType,AllowedCountry:AllowedCountry,CategoryID:CategoryID,Discount:Discount,PrizeId:PrizeId},succeededCallback,failedCallback,userContext); },
+SetPageSize:function(PageSize,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SetPageSize',false,{PageSize:PageSize},succeededCallback,failedCallback,userContext); },
+SetSearchSorting:function(SortBy,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SetSearchSorting',false,{SortBy:SortBy},succeededCallback,failedCallback,userContext); },
+SetPageLayout:function(Layout,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SetPageLayout',false,{Layout:Layout},succeededCallback,failedCallback,userContext); },
+CheckShoppingCartChangeStatus:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'CheckShoppingCartChangeStatus',false,{},succeededCallback,failedCallback,userContext); },
+SetSignupPopupStatus:function(IsShowPopup,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SetSignupPopupStatus',false,{IsShowPopup:IsShowPopup},succeededCallback,failedCallback,userContext); },
+SetNewsletterPopupStatus:function(IsShowPopup,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SetNewsletterPopupStatus',false,{IsShowPopup:IsShowPopup},succeededCallback,failedCallback,userContext); },
+UpdateSearchKeyword:function(ID_SearchTerm,Keyword,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'UpdateSearchKeyword',false,{ID_SearchTerm:ID_SearchTerm,Keyword:Keyword},succeededCallback,failedCallback,userContext); },
+AddSearchSuggestion:function(Name,Email,Phone,Description,ID_Customer,CookiesID,SearchTerm,SearchUrl,FeedbackFrom,IPLocation,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'AddSearchSuggestion',false,{Name:Name,Email:Email,Phone:Phone,Description:Description,ID_Customer:ID_Customer,CookiesID:CookiesID,SearchTerm:SearchTerm,SearchUrl:SearchUrl,FeedbackFrom:FeedbackFrom,IPLocation:IPLocation},succeededCallback,failedCallback,userContext); },
+DeleteRecentSearch:function(ID_Customer,CookiesID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'DeleteRecentSearch',false,{ID_Customer:ID_Customer,CookiesID:CookiesID},succeededCallback,failedCallback,userContext); },
+GetCompleteProductDetail:function(ISBN13,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetCompleteProductDetail',false,{ISBN13:ISBN13},succeededCallback,failedCallback,userContext); },
+GetCompleteProductDetailB2B:function(ISBN13,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetCompleteProductDetailB2B',false,{ISBN13:ISBN13},succeededCallback,failedCallback,userContext); },
+GetProductSimilarDetail:function(ISBN13,google,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetProductSimilarDetail',false,{ISBN13:ISBN13,google:google},succeededCallback,failedCallback,userContext); },
+AddBasketItem:function(ProductID,Quantity,ID_ProductType,ID_Vendor,UserID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'AddBasketItem',false,{ProductID:ProductID,Quantity:Quantity,ID_ProductType:ID_ProductType,ID_Vendor:ID_Vendor,UserID:UserID},succeededCallback,failedCallback,userContext); },
+GetProductsByCategoryIDTable:function(ID_Category,ID_Search,PageNumber,PageSize,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetProductsByCategoryIDTable',false,{ID_Category:ID_Category,ID_Search:ID_Search,PageNumber:PageNumber,PageSize:PageSize},succeededCallback,failedCallback,userContext); },
+GetProductsByCategoryIDTableB2B:function(ID_Category,ID_Search,PageNumber,PageSize,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetProductsByCategoryIDTableB2B',false,{ID_Category:ID_Category,ID_Search:ID_Search,PageNumber:PageNumber,PageSize:PageSize},succeededCallback,failedCallback,userContext); },
+GetProductsByCategoryIDCount:function(ID_Category,ID_Search,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetProductsByCategoryIDCount',false,{ID_Category:ID_Category,ID_Search:ID_Search},succeededCallback,failedCallback,userContext); },
+GetCategoryPathByCategoryID:function(ID_Category,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetCategoryPathByCategoryID',false,{ID_Category:ID_Category},succeededCallback,failedCallback,userContext); },
+GetShoppingCartPopup:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetShoppingCartPopup',false,{},succeededCallback,failedCallback,userContext); },
+UpdateBasketQty:function(ID_BasketDetail,Qty,MultiplyFactor,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'UpdateBasketQty',false,{ID_BasketDetail:ID_BasketDetail,Qty:Qty,MultiplyFactor:MultiplyFactor},succeededCallback,failedCallback,userContext); },
+DeleteBasketItem:function(ID_BasketDetail,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'DeleteBasketItem',false,{ID_BasketDetail:ID_BasketDetail},succeededCallback,failedCallback,userContext); },
+GetCartTotalItemCount:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetCartTotalItemCount',false,{},succeededCallback,failedCallback,userContext); },
+CheckStockAvailability:function(ID_Product,Qty,RowNumber,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'CheckStockAvailability',false,{ID_Product:ID_Product,Qty:Qty,RowNumber:RowNumber},succeededCallback,failedCallback,userContext); },
+AddNewsletterSubscribe:function(Email,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'AddNewsletterSubscribe',false,{Email:Email},succeededCallback,failedCallback,userContext); },
+CCAvenueOrderLookup:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'CCAvenueOrderLookup',false,{},succeededCallback,failedCallback,userContext); },
+CCAvanueConfirmOrder:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'CCAvanueConfirmOrder',false,{},succeededCallback,failedCallback,userContext); },
+RazorpayOrderLookup:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'RazorpayOrderLookup',false,{},succeededCallback,failedCallback,userContext); },
+GetSearchResultTableLucene:function(sb,SearchWord,SearchColoumn,ID_Search,PageNumber,PageSize,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSearchResultTableLucene',false,{sb:sb,SearchWord:SearchWord,SearchColoumn:SearchColoumn,ID_Search:ID_Search,PageNumber:PageNumber,PageSize:PageSize},succeededCallback,failedCallback,userContext); },
+GetSearchResultCountLucene:function(sb,SearchWord,SearchColoumn,ID_Search,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSearchResultCountLucene',false,{sb:sb,SearchWord:SearchWord,SearchColoumn:SearchColoumn,ID_Search:ID_Search},succeededCallback,failedCallback,userContext); },
+GetSearchResultTotalCountLucene:function(sb,SearchWord,SearchColoumn,ID_Search,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSearchResultTotalCountLucene',false,{sb:sb,SearchWord:SearchWord,SearchColoumn:SearchColoumn,ID_Search:ID_Search},succeededCallback,failedCallback,userContext); },
+GetRSA:function(orderId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetRSA',false,{orderId:orderId},succeededCallback,failedCallback,userContext); },
+AddNotifyMe:function(productId,isbn,email,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'AddNotifyMe',false,{productId:productId,isbn:isbn,email:email},succeededCallback,failedCallback,userContext); },
+AddRequestaBook:function(productTitle,isbn,author,quantity,email,phonenumber,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'AddRequestaBook',false,{productTitle:productTitle,isbn:isbn,author:author,quantity:quantity,email:email,phonenumber:phonenumber},succeededCallback,failedCallback,userContext); },
+VerifyEmail:function(email,type,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'VerifyEmail',false,{email:email,type:type},succeededCallback,failedCallback,userContext); },
+ResendOTPEmail:function(email,type,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'ResendOTPEmail',false,{email:email,type:type},succeededCallback,failedCallback,userContext); },
+VerifyEmailNotifyListing:function(email,productId,isbn,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'VerifyEmailNotifyListing',false,{email:email,productId:productId,isbn:isbn},succeededCallback,failedCallback,userContext); },
+GetCountries:function(knownCategoryValues,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetCountries',false,{knownCategoryValues:knownCategoryValues},succeededCallback,failedCallback,userContext); },
+GetStates:function(knownCategoryValues,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetStates',false,{knownCategoryValues:knownCategoryValues},succeededCallback,failedCallback,userContext); },
+GetCities:function(knownCategoryValues,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetCities',false,{knownCategoryValues:knownCategoryValues},succeededCallback,failedCallback,userContext); }}
+SearchResultService.registerClass('SearchResultService',Sys.Net.WebServiceProxy);
+SearchResultService._staticInstance = new SearchResultService();
+SearchResultService.set_path = function(value) { SearchResultService._staticInstance.set_path(value); }
+SearchResultService.get_path = function() { return SearchResultService._staticInstance.get_path(); }
+SearchResultService.set_timeout = function(value) { SearchResultService._staticInstance.set_timeout(value); }
+SearchResultService.get_timeout = function() { return SearchResultService._staticInstance.get_timeout(); }
+SearchResultService.set_defaultUserContext = function(value) { SearchResultService._staticInstance.set_defaultUserContext(value); }
+SearchResultService.get_defaultUserContext = function() { return SearchResultService._staticInstance.get_defaultUserContext(); }
+SearchResultService.set_defaultSucceededCallback = function(value) { SearchResultService._staticInstance.set_defaultSucceededCallback(value); }
+SearchResultService.get_defaultSucceededCallback = function() { return SearchResultService._staticInstance.get_defaultSucceededCallback(); }
+SearchResultService.set_defaultFailedCallback = function(value) { SearchResultService._staticInstance.set_defaultFailedCallback(value); }
+SearchResultService.get_defaultFailedCallback = function() { return SearchResultService._staticInstance.get_defaultFailedCallback(); }
+SearchResultService.set_enableJsonp = function(value) { SearchResultService._staticInstance.set_enableJsonp(value); }
+SearchResultService.get_enableJsonp = function() { return SearchResultService._staticInstance.get_enableJsonp(); }
+SearchResultService.set_jsonpCallbackParameter = function(value) { SearchResultService._staticInstance.set_jsonpCallbackParameter(value); }
+SearchResultService.get_jsonpCallbackParameter = function() { return SearchResultService._staticInstance.get_jsonpCallbackParameter(); }
+SearchResultService.set_path("/SearchResultService.asmx");
+SearchResultService.GetSearchResultTable= function(SearchWord,SearchColoumn,ID_Search,PageNumber,PageSize,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetSearchResultTable(SearchWord,SearchColoumn,ID_Search,PageNumber,PageSize,onSuccess,onFailed,userContext); }
+SearchResultService.GetSearchResultTableSecond= function(SearchWord,SearchColoumn,ID_Search,PageNumber,PageSize,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetSearchResultTableSecond(SearchWord,SearchColoumn,ID_Search,PageNumber,PageSize,onSuccess,onFailed,userContext); }
+SearchResultService.GetSearchResultCount= function(SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetSearchResultCount(SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext); }
+SearchResultService.GetSearchResultCountGoogle= function(SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetSearchResultCountGoogle(SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext); }
+SearchResultService.GetSearchResultTotalCount= function(SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetSearchResultTotalCount(SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext); }
+SearchResultService.GetSearchResultTotalCountGoogle= function(SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetSearchResultTotalCountGoogle(SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext); }
+SearchResultService.GetSearchID= function(Price,ShippingTime,Binding,PubYear,Source,search_term,filter,IPLocation,Stock,Language,SearchType,AllowedCountry,CategoryID,Discount,PrizeId,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetSearchID(Price,ShippingTime,Binding,PubYear,Source,search_term,filter,IPLocation,Stock,Language,SearchType,AllowedCountry,CategoryID,Discount,PrizeId,onSuccess,onFailed,userContext); }
+SearchResultService.SetPageSize= function(PageSize,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.SetPageSize(PageSize,onSuccess,onFailed,userContext); }
+SearchResultService.SetSearchSorting= function(SortBy,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.SetSearchSorting(SortBy,onSuccess,onFailed,userContext); }
+SearchResultService.SetPageLayout= function(Layout,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.SetPageLayout(Layout,onSuccess,onFailed,userContext); }
+SearchResultService.CheckShoppingCartChangeStatus= function(onSuccess,onFailed,userContext) {SearchResultService._staticInstance.CheckShoppingCartChangeStatus(onSuccess,onFailed,userContext); }
+SearchResultService.SetSignupPopupStatus= function(IsShowPopup,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.SetSignupPopupStatus(IsShowPopup,onSuccess,onFailed,userContext); }
+SearchResultService.SetNewsletterPopupStatus= function(IsShowPopup,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.SetNewsletterPopupStatus(IsShowPopup,onSuccess,onFailed,userContext); }
+SearchResultService.UpdateSearchKeyword= function(ID_SearchTerm,Keyword,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.UpdateSearchKeyword(ID_SearchTerm,Keyword,onSuccess,onFailed,userContext); }
+SearchResultService.AddSearchSuggestion= function(Name,Email,Phone,Description,ID_Customer,CookiesID,SearchTerm,SearchUrl,FeedbackFrom,IPLocation,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.AddSearchSuggestion(Name,Email,Phone,Description,ID_Customer,CookiesID,SearchTerm,SearchUrl,FeedbackFrom,IPLocation,onSuccess,onFailed,userContext); }
+SearchResultService.DeleteRecentSearch= function(ID_Customer,CookiesID,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.DeleteRecentSearch(ID_Customer,CookiesID,onSuccess,onFailed,userContext); }
+SearchResultService.GetCompleteProductDetail= function(ISBN13,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetCompleteProductDetail(ISBN13,onSuccess,onFailed,userContext); }
+SearchResultService.GetCompleteProductDetailB2B= function(ISBN13,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetCompleteProductDetailB2B(ISBN13,onSuccess,onFailed,userContext); }
+SearchResultService.GetProductSimilarDetail= function(ISBN13,google,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetProductSimilarDetail(ISBN13,google,onSuccess,onFailed,userContext); }
+SearchResultService.AddBasketItem= function(ProductID,Quantity,ID_ProductType,ID_Vendor,UserID,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.AddBasketItem(ProductID,Quantity,ID_ProductType,ID_Vendor,UserID,onSuccess,onFailed,userContext); }
+SearchResultService.GetProductsByCategoryIDTable= function(ID_Category,ID_Search,PageNumber,PageSize,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetProductsByCategoryIDTable(ID_Category,ID_Search,PageNumber,PageSize,onSuccess,onFailed,userContext); }
+SearchResultService.GetProductsByCategoryIDTableB2B= function(ID_Category,ID_Search,PageNumber,PageSize,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetProductsByCategoryIDTableB2B(ID_Category,ID_Search,PageNumber,PageSize,onSuccess,onFailed,userContext); }
+SearchResultService.GetProductsByCategoryIDCount= function(ID_Category,ID_Search,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetProductsByCategoryIDCount(ID_Category,ID_Search,onSuccess,onFailed,userContext); }
+SearchResultService.GetCategoryPathByCategoryID= function(ID_Category,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetCategoryPathByCategoryID(ID_Category,onSuccess,onFailed,userContext); }
+SearchResultService.GetShoppingCartPopup= function(onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetShoppingCartPopup(onSuccess,onFailed,userContext); }
+SearchResultService.UpdateBasketQty= function(ID_BasketDetail,Qty,MultiplyFactor,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.UpdateBasketQty(ID_BasketDetail,Qty,MultiplyFactor,onSuccess,onFailed,userContext); }
+SearchResultService.DeleteBasketItem= function(ID_BasketDetail,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.DeleteBasketItem(ID_BasketDetail,onSuccess,onFailed,userContext); }
+SearchResultService.GetCartTotalItemCount= function(onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetCartTotalItemCount(onSuccess,onFailed,userContext); }
+SearchResultService.CheckStockAvailability= function(ID_Product,Qty,RowNumber,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.CheckStockAvailability(ID_Product,Qty,RowNumber,onSuccess,onFailed,userContext); }
+SearchResultService.AddNewsletterSubscribe= function(Email,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.AddNewsletterSubscribe(Email,onSuccess,onFailed,userContext); }
+SearchResultService.CCAvenueOrderLookup= function(onSuccess,onFailed,userContext) {SearchResultService._staticInstance.CCAvenueOrderLookup(onSuccess,onFailed,userContext); }
+SearchResultService.CCAvanueConfirmOrder= function(onSuccess,onFailed,userContext) {SearchResultService._staticInstance.CCAvanueConfirmOrder(onSuccess,onFailed,userContext); }
+SearchResultService.RazorpayOrderLookup= function(onSuccess,onFailed,userContext) {SearchResultService._staticInstance.RazorpayOrderLookup(onSuccess,onFailed,userContext); }
+SearchResultService.GetSearchResultTableLucene= function(sb,SearchWord,SearchColoumn,ID_Search,PageNumber,PageSize,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetSearchResultTableLucene(sb,SearchWord,SearchColoumn,ID_Search,PageNumber,PageSize,onSuccess,onFailed,userContext); }
+SearchResultService.GetSearchResultCountLucene= function(sb,SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetSearchResultCountLucene(sb,SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext); }
+SearchResultService.GetSearchResultTotalCountLucene= function(sb,SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetSearchResultTotalCountLucene(sb,SearchWord,SearchColoumn,ID_Search,onSuccess,onFailed,userContext); }
+SearchResultService.GetRSA= function(orderId,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetRSA(orderId,onSuccess,onFailed,userContext); }
+SearchResultService.AddNotifyMe= function(productId,isbn,email,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.AddNotifyMe(productId,isbn,email,onSuccess,onFailed,userContext); }
+SearchResultService.AddRequestaBook= function(productTitle,isbn,author,quantity,email,phonenumber,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.AddRequestaBook(productTitle,isbn,author,quantity,email,phonenumber,onSuccess,onFailed,userContext); }
+SearchResultService.VerifyEmail= function(email,type,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.VerifyEmail(email,type,onSuccess,onFailed,userContext); }
+SearchResultService.ResendOTPEmail= function(email,type,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.ResendOTPEmail(email,type,onSuccess,onFailed,userContext); }
+SearchResultService.VerifyEmailNotifyListing= function(email,productId,isbn,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.VerifyEmailNotifyListing(email,productId,isbn,onSuccess,onFailed,userContext); }
+SearchResultService.GetCountries= function(knownCategoryValues,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetCountries(knownCategoryValues,onSuccess,onFailed,userContext); }
+SearchResultService.GetStates= function(knownCategoryValues,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetStates(knownCategoryValues,onSuccess,onFailed,userContext); }
+SearchResultService.GetCities= function(knownCategoryValues,onSuccess,onFailed,userContext) {SearchResultService._staticInstance.GetCities(knownCategoryValues,onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+Type.registerNamespace('System.Data');
+if (typeof(System.Data.DataSet) === 'undefined') {
+System.Data.DataSet=gtc("System.Data.DataSet");
+System.Data.DataSet.registerClass('System.Data.DataSet');
+}
+Type.registerNamespace('AjaxControlToolkit');
+if (typeof(AjaxControlToolkit.CascadingDropDownNameValue) === 'undefined') {
+AjaxControlToolkit.CascadingDropDownNameValue=gtc("AjaxControlToolkit.CascadingDropDownNameValue");
+AjaxControlToolkit.CascadingDropDownNameValue.registerClass('AjaxControlToolkit.CascadingDropDownNameValue');
+}

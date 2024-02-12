@@ -1,0 +1,123 @@
+﻿
+$(window).scroll(function () {
+
+    //load content on scroll top
+    if (($(window).scrollTop() > (($(document).height() - 2800) - $(window).height())) && (trOn != "on") && (totalRecords > pageSize)) {
+        trOn = "on";
+        // $('#lastPostLoader').empty();
+        //<![CDATA[
+        // $('#lastPostLoader').html("<img src='" + RootPath + "/images/dynamic/ajax-loader-transparent.gif'/>Loading more results");
+        //]]>
+
+        if (pageNo <= 2) {
+            getSearchResult();
+        }
+    }
+});
+$(document).ready(function () {
+
+    $("div#lastPostLoader").click(function () {
+        $('div#lastPostLoader').html("<img src='" + RootPath + "/images/dynamic/ajax-loader-transparent.gif' alt='loading'/>Loading more results");
+        getSearchResult();
+    });
+
+    $("#ddlSort").on("change", function () {
+        SetSearchSort();
+    });
+});
+  
+
+
+    function getSearchResult() {
+
+     //   contentLoadTriggered = false;
+        var i  ;
+     //   var totalRecords = 300;
+     //   var pageSize = 0;
+     //var search_term = 0 ;
+     //   var searchId =0 ;
+     //   var filter = "filter" ;
+     //   var productType =1;
+     //   var pageLayout = "list";
+     //   var filterQuery = "fq = IsImageAvailable:1 & fq=Ranking: [1 TO 999999998] & fq=Product_discount: [45  TO *]" ;
+       // var trOn = off; 
+                   
+        var param = '{"searchTerm":"' + search_term + '","ID_Search":' + searchId + ',"next_item_index":"' + pageNo + '","filter":"' + filter + '","ID_ProductType":' + productType + ',"IsAlterQuery":true,"FilterQuery":"' + filterQuery + '"}';
+        $('.full-loader').fadeIn();
+      
+        $.ajax(
+            {
+
+                type: "POST",
+                url: RootPath + "/DealoftheDay.aspx/GetCategorySearchResu",
+                data: param,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (msg) {
+                    if (msg.d != "No More Records Found") {
+                      
+                        if (pageLayout == "list")
+                            $("#listpromoproduct").append(msg.d);
+                        else
+                            $("#listpromoproduct").append(msg.d);
+                        /* if (screen.width >= 767) {*/
+                        $('.full-loader').fadeOut();
+                        $(".iframe").colorbox({ iframe: true, width: "850px", height: "430px", fixed: true, scrolling: false, onClosed: OnCloseCart });
+                        $(".wws-detail").colorbox({ iframe: true, width: "850px", height: "400px", fixed: true, scrolling: false });
+                        $(".country-pop").colorbox({ iframe: true, width: "550px", height: "300px", fixed: true, scrolling: false });
+
+                        var imgDefer = document.getElementsByTagName('img');
+
+                        //for (var i = 0; i < imgDefer.length; i++) {
+                        //    if (imgDefer[i].getAttribute('data-src')) {
+                        //        imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
+                        //        $('.img-loading').parent().next().css('display', 'block');
+                        //        $('.img-loading').next().css('display', 'block');
+                        //        $('.img-loading').prev().css('display', 'block');
+                        //        imgDefer[i].removeAttribute("class");
+                        //    }
+                        //}
+
+                         //}
+                        //$('.bklazy').lazy({
+                        //    onError: function (element) {
+                        //        $(element).attr("src", $(element).attr("data-src"));
+                        //        $(element).attr("data-src", "");
+                        //    }
+                        //});
+                        //$('.grid-view .title').dotdotdot();
+                        //<![CDATA[
+                        if (pageNo == 0) {
+
+                            $('div#lastPostLoader').html("<img src='" + RootPath + "/images/dynamic/ajax-loader-transparent.gif' alt='loading'/>Loading more results");
+                        }
+                        else {
+                            if (((pageNo + 1) * pageSize) <= totalRecords)
+                                $('div#lastPostLoader').html("<span class='more-load-page'>Load more results <img src='" + RootPath + "/images/dynamic/load-more.png' alt='load more'/></span>");
+                            else {
+                                $('div#lastPostLoader').html("No more records found");
+                                $("div#lastPostLoader").unbind("click");
+                            }
+                        }
+                        //]]>
+                        pageNo = pageNo + 1;
+                        trOn = "off";
+                    }
+                    else {
+                        $('.full-loader').fadeOut();
+                        trOn = "on";
+                        $('div#lastPostLoader').html("No more records found");
+                        $("div#lastPostLoader").unbind("click");
+                    }
+
+                },
+                error: function (x, e) {
+                    $('.full-loader').fadeOut();
+                    //alert("The call to the server side failed. " +
+                    //    x.responseText);
+                }
+            }
+        );
+    }
