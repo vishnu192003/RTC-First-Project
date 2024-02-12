@@ -17,13 +17,13 @@
 }
 .main{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; 
-
-
-     background-color: #465767;  
-     color: #fff;    
-     
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 100px;  
+box-shadow: 20px 20px 60px black; 
+margin-bottom: 5rem;  
+background-color: #465767;  
+color: #fff;     
 }
 
 .card{
@@ -34,6 +34,7 @@
     box-shadow: 0px 2px 4px rgba(70, 63, 63, 0.2);   
     margin: 20px;    
     box-shadow: 20px 20px 60px black; 
+    font-size: 60%;
 }
 .card1{
     width: 250px;
@@ -42,7 +43,8 @@
     overflow:hidden;
     box-shadow: 0px 2px 4px rgba(70, 63, 63, 0.2);   
     margin: 20px;    
-    box-shadow: 20px 20px 60px black; 
+    box-shadow: 20px 20px 60px black;
+    font-size: 60%; 
 }
 .img1{
     width: 100%;
@@ -85,7 +87,8 @@ button:hover{
 }
 .hyperlink{
     font-family: fredoka;
-    color: #003d39;
+    color: grey;
+    
 }
 
 
@@ -101,6 +104,7 @@ padding-right: 2rem;
 display: flex;
 justify-content: center;
 padding: 1rem 0 0 0;
+flex-wrap: wrap;
 }
 .searchname{
 display: flex;
@@ -180,3 +184,4 @@ width: 270px;
 box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* default box shadow */
 transition: box-shadow 0.5s ease; /* smooth transition effect */
 }
+
