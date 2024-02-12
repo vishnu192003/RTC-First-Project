@@ -1,6 +1,6 @@
 .heading{
     text-align: center;
-    color:  red;
+    color:  #003d39;
     
 }
 
@@ -93,7 +93,7 @@ button:hover{
 
 
 .off{
-    color: red;
+    color:  #003d39;
 }
 .search{
 border: 1px solid black;
