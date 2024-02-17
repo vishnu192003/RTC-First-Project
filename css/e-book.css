@@ -4,7 +4,7 @@
     text-align: center;
     font-family: 'Comfortaa', sans-serif;
     font-weight: 900;
-    color: #003d39;
+    color: red;
     font-size: 45px;
 }
 .txt{
@@ -19,7 +19,7 @@
     height: 180px;
     width: 80%;
     padding: 30px;
-    background-color: red;
+    background-color: #003d39;
     border-radius: 10px;
 }
 .im1{
@@ -60,9 +60,13 @@ margin: 20px;
 box-shadow: 20px 20px 60px black; 
 }
 .b1:hover{
-    cursor: pointer;
-    box-shadow: 0px 2px 4px rgba(70, 63, 63, 0.2);
-    box-shadow: 5px 5px  20px rgb(36, 36, 36);
+    
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.2s;
+        border-radius: 15px;
+      
+    
 }
 .b1{
     font-size: 60%;

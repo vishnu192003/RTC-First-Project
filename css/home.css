@@ -20,7 +20,15 @@ border-radius: 10px;
 overflow:hidden;
 box-shadow: 0px 2px 4px rgba(70, 63, 63, 0.2);   
 margin: 20px;    
-box-shadow: 20px 20px 60px black;      
+box-shadow: 20px 20px 60px black;   
+   
+}
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s;
+  border-radius: 15px;
+
 }
 .card img{
 width: 100%;
@@ -100,11 +108,13 @@ margin-top: 3rem;
 
    .quote{
     height: 6rem;
-    width: 60%;
+    width: 90%;
     font-size: larger;
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
     font-family: 'Caveat', cursive;
+    
    }
+   
    
   .searchbar{ 
     display: flex;
@@ -134,6 +144,7 @@ margin-top: 3rem;
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
+  
  
 }
 .logo a{
@@ -175,9 +186,7 @@ p a {
  text-decoration: none;
  color: black;
 }
-.rtc{
-  
-  }
+
  .searchname{
     display: flex;
     position: relative;
@@ -230,4 +239,9 @@ button{
 }
 a{
   font-size:large;
+}
+.img_review{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

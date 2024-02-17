@@ -1,14 +1,12 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
 .heading{
     text-align: center;
     color:  #003d39;
     
 }
-
-
-
-    
-
-
 .thought{
     text-align: center;
     font-size: medium;
@@ -175,13 +173,54 @@ position: relative;
 left: 30rem;
 }
 .card:hover{
-width: 270px;
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* default box shadow */
-transition: box-shadow 0.5s ease; /* smooth transition effect */
-}
-.card1:hover{
-width: 270px;
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* default box shadow */
-transition: box-shadow 0.5s ease; /* smooth transition effect */
-}
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
+    border-radius: 15px;
+  
+  }
+  .card1:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
+    border-radius: 15px;
+  
+  }
 
+.copywrite{
+    display: flex;
+    background-color: #637baa;
+    height: 320px;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .copywrite1{
+    width:20%;
+   margin-top: 2rem;
+    
+  }
+  .column{
+    margin-top: 5rem;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    
+  }
+  .copywrite2{
+    text-align: left;
+    font-size: 1.5rem;
+  }
+  p a {
+    line-height: 1rem;
+    text-decoration: none;
+    color: black;
+   }
+   
+   .cp-text{ 
+
+    background-color: #000000;
+      color: rgb(255, 255, 255);
+      height: 3rem;
+      padding-top: 0rem;
+      margin: 0%;
+     
+  }
